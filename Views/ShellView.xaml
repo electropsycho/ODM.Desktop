@@ -1,0 +1,32 @@
+﻿<controls:MetroWindow x:Class="ODM.UI.WPF.Views.ShellView"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:reactiveUi="http://reactiveui.net"
+                      xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+                      dialogs:DialogParticipation.Register="{Binding}"
+                      mc:Ignorable="d"
+                      Title="ODM Masaüstü v1.0" 
+                      Height="300" Width="300" 
+                      WindowStartupLocation="CenterScreen"
+                      ResizeMode="NoResize"
+                      Icon="../Resources/geometry.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="221*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <reactiveUi:RoutedViewHost Grid.Row="0" 
+                                   x:Name="RoutedViewHost"
+                                   HorizontalContentAlignment="Stretch"
+                                   VerticalContentAlignment="Stretch" 
+                                   Margin="0"/>
+        <StackPanel Margin="0" Grid.Row="1" Orientation="Horizontal">
+            <Image Height="30"  Margin="5" Source="{DynamicResource LicenseImage}"/>
+        </StackPanel>
+
+    </Grid>
+</controls:MetroWindow>

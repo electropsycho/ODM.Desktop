@@ -1,0 +1,26 @@
+﻿<reactiveUi:ReactiveUserControl x:TypeArguments="viewModels:SettingViewModel"
+                                x:Class="ODM.UI.WPF.Views.SettingView"
+                                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                                xmlns:viewModels="clr-namespace:ODM.UI.WPF.ViewModels"
+                                xmlns:reactiveUi="http://reactiveui.net"
+                                xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                                mc:Ignorable="d">
+    <AdornerDecorator>
+    <Grid>
+        <StackPanel Margin="0">
+            <StackPanel Orientation="Vertical" Margin="10,10,10,0">
+                <Label Content="Web Adresi"/>
+                <TextBox x:Name="TxtBaseAddress" Text="{Binding BaseAddress, UpdateSourceTrigger=PropertyChanged}" Height="23" TextWrapping="Wrap" mah:TextBoxHelper.Watermark="Web Adresi (https://****odm.meb.gov.tr)" Padding="0" Margin="0,6,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="10,10,10,0">
+                <Label Content="Mail Senkronizasyon Süresi(dk cinsinden)"/>
+                <TextBox x:Name="TxtMailSyncInterval"  Text="{Binding MailSyncInterval, UpdateSourceTrigger=PropertyChanged}" Height="23" TextWrapping="Wrap" Margin="0,6,0,0" mah:TextBoxHelper.Watermark="Örn: 60 Dakikada bir" TextAlignment="Center"/>
+            </StackPanel>
+            <Button x:Name="btnSave" Content="KAYDET" Margin="50,20,50,0" MinHeight="30"/>
+        </StackPanel>
+    </Grid>
+        </AdornerDecorator>
+</reactiveUi:ReactiveUserControl>
